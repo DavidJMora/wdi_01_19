@@ -7,12 +7,17 @@ function init() {
 
 function calculate() {
     event.preventDefault();
-
-    let numbers = [];
     
     let e = event.target.innerText;
+    
+    let display = document.querySelector('.calculatorDisplay');
 
-    if(event <= 9 || e === '.') {
-        document.querySelector('.calculatorDisplay').innerText = displayedData;
+    if(e <= 9 || e === '.') {
+        if(display.innerText === '0') {
+            display.innerText = e;
+            console.log('hello');
+        } else{
+            display.innerText += e;
+        }
     }
 }
