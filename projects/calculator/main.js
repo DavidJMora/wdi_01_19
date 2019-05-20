@@ -8,8 +8,11 @@ function init() {
 function calculate() {
     event.preventDefault();
 
-    let variable = event.target.innerText;
-    // let numberToCalc = [];
+    let numbers = [];
+    
+    let e = event.target.innerText;
 
-    document.querySelector('calculatorDisplay').innerText = variable;
+    if(event <= 9 || e === '.') {
+        document.querySelector('.calculatorDisplay').innerText = displayedData;
+    }
 }
