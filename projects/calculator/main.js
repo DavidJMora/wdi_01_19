@@ -12,10 +12,9 @@ function calculate() {
     
     let display = document.querySelector('.calculatorDisplay');
 
-    if(e <= 9 || e === '.') {
+    if(e <= 9 || display.innerText.includes('.') === false) {
         if(display.innerText === '0') {
             display.innerText = e;
-            console.log('hello');
         } else{
             display.innerText += e;
         }
