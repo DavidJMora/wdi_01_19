@@ -23,5 +23,10 @@ function display() {
             display.innerText += e.innerText;
             storeValue += e.innerText;
         }
+    } else {
+        if(e.hasAttributes('data-action') === false) {
+            display.innerText += e.innerText;
+            storeValue += e.innerText;
+        }
     }
 }
